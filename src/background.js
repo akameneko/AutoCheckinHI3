@@ -1,9 +1,9 @@
 'use strict';
-chrome.runtime.onStartup.addListener(function(){
-    setTimeout(onload,10000);
+chrome.runtime.onStartup.addListener(function () {
+    setTimeout(onload, 5000);
 });
 async function onload() {
-    console.log("start");
+    console.log("honkai checkin start");
     try {
         var res = await fetch(
             "https://sg-public-api.hoyolab.com/event/mani/sign?lang=vi-vn",
@@ -14,4 +14,5 @@ async function onload() {
         console.log(e);
         setTimeout(onload, 5000);
     }
+    console.log("honkai checkin done");
 }
